@@ -6,6 +6,10 @@
 
 <br>
 
+![Diagram of Components](src\img\diner-photo-Spencer-Davis.jpg)
+##### Photo By **Spencer Davis on Unsplash.com**
+
+<br>
 ## 💾 Technologies Used
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
