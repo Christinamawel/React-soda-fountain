@@ -21,7 +21,7 @@ function AddSodaForm(props) {
     <React.Fragment>
       <ReusableSodaForm
         formSubmissionHandler={handleAddSodaFormSubmission}
-        buttonText="Fill Soda Fountain"
+        buttonText="Add Soda Fountain"
       />
     </React.Fragment>
   )

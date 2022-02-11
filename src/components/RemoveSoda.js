@@ -7,10 +7,15 @@ function RemoveSoda(props) {
     props.onSodaRemove(props.soda)
   }
 
+  const btnStyle = {
+    display: "block",
+    margin: ".5em auto"
+  }
+
   return (
     <React.Fragment>
       <h2>Are you sure you want to remove this soda from this Fountain?</h2>
-      <button onClick={handleSodaDelete}>Remove Soda</button>
+      <button style={btnStyle} onClick={handleSodaDelete}>Remove Soda</button>
     </React.Fragment>
   )
 }
