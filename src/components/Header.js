@@ -2,8 +2,10 @@ import React from 'react';
 
 function Header() {
   const styles = {
-    fontSize: "3rem",
-    color: "rgb(19, 19, 189)"
+    fontSize: "4rem",
+    display: "flowRoot",
+    marginTop: "0",
+    paddingTop: ".5em"
   }
 
   return (

@@ -3,11 +3,17 @@ import Header from './Header';
 import SodaController from './SodaController';
 
 function App() {
+  const divStyle = {
+    backgroundColor: "rgba(255, 255, 255, .9)",
+    height: "100vh",
+    margin: "0"
+  }
+
   return (
-    <React.Fragment>
+    <div style= {divStyle}>
       <Header />
       <SodaController />
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -1,9 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Poppins&display=swap');
 
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   text-align: center;
-  background-color: rgb(255, 218, 224);
+  background-image: url(".\img\diner-photo-Spencer-Davis.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Fontdiner Swanky', 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: .3em 0;
 }
 
 button {
@@ -12,7 +27,7 @@ button {
   font-size: 1.5rem;
   padding: .5em 1em;
   background-color:rgb(73, 73, 231);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 button:hover {
