@@ -1,5 +1,6 @@
 import React from 'react';
 import SodaList from './SodaList';
+import AddSodaForm from './AddSodaForm';
 
 class SodaController extends React.Component {
   constructor() {
@@ -45,6 +46,7 @@ class SodaController extends React.Component {
     return(
       <React.Fragment>
         <SodaList sodaList={mainSodaList}/>
+        <AddSodaForm />
       </React.Fragment>
     )
   }
