@@ -11,7 +11,7 @@ function AddSodaForm(props) {
       name: event.target.name.value, 
       brand: event.target.brand.value, 
       flavor: event.target.flavor.value,
-      amount: event.target.amount.value,
+      amount: event.target.amount.value.toInt(),
       color: event.target.color.value,
       id: v4()
     })

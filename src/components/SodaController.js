@@ -12,7 +12,7 @@ class SodaController extends React.Component {
         name: "Coke",
         brand: "Coca-Cola",
         flavor: "Cola",
-        amount: "15",
+        amount: 15,
         color: "#333029",
         id: 1
       },
@@ -20,7 +20,7 @@ class SodaController extends React.Component {
         name: "Sprit",
         brand: "Coca-Cola",
         flavor: "Lemon-Lime",
-        amount: "8",
+        amount: 8,
         color: "#a3f5a3",
         id: 2
       },
@@ -28,7 +28,7 @@ class SodaController extends React.Component {
         name: "A&W",
         brand: "A&W",
         flavor: "Root Beer",
-        amount: "20",
+        amount: 20,
         color: "#4f4331",
         id: 3
       },
@@ -36,7 +36,7 @@ class SodaController extends React.Component {
         name: "Fanta Orange",
         brand: "Fanta",
         flavor: "Orange",
-        amount: "13",
+        amount: 13,
         color: "#e69a29",
         id: 4
       }
@@ -49,6 +49,8 @@ class SodaController extends React.Component {
     };
   }
 
+  // -------Sent to AddSodaForm---------
+
   handleAddingNewSoda = (newSoda) => {
     const newMainSodaList = this.state.mainSodaList.concat(newSoda);
     this.setState({
@@ -57,12 +59,28 @@ class SodaController extends React.Component {
     })
   }
 
+  // -------Sent to SodaList---------
+
   handleChangingDetailView = (id) => {
-    const currentSoda = this.state.mainSodaList.filter(
-      (soda) => soda.id === id
-    )[0];
+    const currentSoda = this.state.mainSodaList
+    .filter((soda) => soda.id === id)[0];
     this.setState({
       currentSodaInDetails: currentSoda,
+      pageShowing: 2
+    })
+  }
+
+  // -------Sent to SodaDetails---------
+
+  handleSodaAmountChange = (amount) => {
+    const currentSoda = this.state.mainSodaList
+    .filter((soda) => soda.id === this.state.currentSodaInDetails.id)[0];
+    currentSoda.amount = amount
+    const editedSodaList = this.state.mainSodaList
+    .filter((soda) => soda.id !== this.state.currentSodaInDetails.id)
+    .concat(currentSoda)
+    this.setState({
+      mainSodaList: editedSodaList,
       pageShowing: 2
     })
   }
@@ -89,7 +107,7 @@ class SodaController extends React.Component {
       currentPage = <SodaList currentSodaList={mainSodaList} onChangingDetailView={this.handleChangingDetailView}/>
       buttonText = "Add soda"
     } else if(this.state.pageShowing === 2){
-      currentPage = <SodaDetails soda={currentSodaInDetails} />
+      currentPage = <SodaDetails soda={currentSodaInDetails} onAmountChange={this.handleSodaAmountChange}/>
       buttonText = "Back to soda fountains"
     } else {
       currentPage = <AddSodaForm onNewSodaAdded={this.handleAddingNewSoda}/>

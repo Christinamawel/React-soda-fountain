@@ -7,15 +7,34 @@ function SodaDetails(props) {
     width: "3em",
     height: `${1 * soda.amount}em`,
     backgroundColor: `${soda.color}`
+
+  }
+
+  const detailsDivStyle = {
+    minHeight: "30em",
+    display: "flex",
+    alignItems: "flex-end",
+  }
+
+  function handleServeClick() {
+    props.onAmountChange(soda.amount - 1)
+  }
+
+  function handleRefillClick() {
+    props.onAmountChange(20)
   }
 
   return (
-    <React.Fragment>
-      <div style={sodaBarStyles}></div>
-      <h3>{soda.name}</h3>
-      <p>{soda.brand}</p>
-      <p>{soda.flavor}</p>
-    </React.Fragment>
+    <div style={detailsDivStyle}>
+      <div>
+        <div style={sodaBarStyles}></div>
+        <h3>{soda.name}</h3>
+        <p>{soda.brand}</p>
+        <p>{soda.flavor}</p>
+        <button onClick={handleServeClick}>Serve a Cup</button>
+        <button onClick={handleRefillClick}>Refill Soda Fountain</button>
+      </div>
+    </div>
   )
 }
 
@@ -25,6 +44,7 @@ SodaDetails.propTypes = {
   flavor: PropTypes.string,
   amount: PropTypes.number,
   color: PropTypes.string,
+  onAmountChange: PropTypes.func
 }
 
 export default SodaDetails;

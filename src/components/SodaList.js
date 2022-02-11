@@ -6,7 +6,8 @@ function SodaList(props) {
   const sodaListStyles = {
     display: "flex",
     columnGap: "2em",
-    alignItems: "flex-end"
+    alignItems: "flex-end",
+    minHeight: "30em"
   }
 
   return (
