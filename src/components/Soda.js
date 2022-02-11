@@ -16,8 +16,8 @@ function Soda(props) {
     <div onClick={handleClick}>
       <div id="soda-bar" style={sodaBarStyles}></div>
       <h3>{props.name}</h3>
-      <p>{props.brand}</p>
-      <p>{props.flavor}</p>
+      <p>brand: {props.brand}</p>
+      <p>flavor: {props.flavor}</p>
     </div>
   )
 }

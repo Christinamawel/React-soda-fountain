@@ -17,15 +17,13 @@
 
 <br>
 
-## 🐶 Description
+## 💻 Description
 
 _End of week friday project for epicodus school made to demonstrate skills in React applications. It has full CRUD(create, read, update, delete) functionality, using react components, props, and functional programming concepts._
 
 <br>
 
-## 💻 Setup/Installation Requirements
-
-### ⚙️ Setup and Use
+## ⚙️ Setup
 
 * Clone the GitHub repository: https://github.com/christophermneal/merch-site
 * From the main project directory, run npm install in the terminal to load necessary plugins and packages.

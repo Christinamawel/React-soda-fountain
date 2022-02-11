@@ -7,7 +7,6 @@ function SodaDetails(props) {
     width: "3em",
     height: `${1 * soda.amount}em`,
     backgroundColor: `${soda.color}`
-
   }
 
   const detailsDivStyle = {
@@ -28,6 +27,10 @@ function SodaDetails(props) {
     props.onEditClick()
   }
 
+  function handleRemoveClick() {
+    props.onRemoveClick()
+  }
+
   return (
     <div style={detailsDivStyle}>
       <div>
@@ -38,6 +41,7 @@ function SodaDetails(props) {
         <button onClick={handleServeClick}>Serve a Cup</button>
         <button onClick={handleRefillClick}>Refill Soda Fountain</button>
         <button onClick={handleEditClick}>Edit Soda Information</button>
+        <button onClick={handleRemoveClick}>Remove Soda</button>
       </div>
     </div>
   )
@@ -49,7 +53,8 @@ SodaDetails.propTypes = {
   flavor: PropTypes.string,
   amount: PropTypes.number,
   color: PropTypes.string,
-  onAmountChange: PropTypes.func
+  onAmountChange: PropTypes.func,
+  onRemoveClick: PropTypes.func
 }
 
 export default SodaDetails;
