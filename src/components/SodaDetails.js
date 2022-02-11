@@ -24,6 +24,10 @@ function SodaDetails(props) {
     props.onAmountChange(20)
   }
 
+  function handleEditClick() {
+    props.onEditClick()
+  }
+
   return (
     <div style={detailsDivStyle}>
       <div>
@@ -33,6 +37,7 @@ function SodaDetails(props) {
         <p>{soda.flavor}</p>
         <button onClick={handleServeClick}>Serve a Cup</button>
         <button onClick={handleRefillClick}>Refill Soda Fountain</button>
+        <button onClick={handleEditClick}>Edit Soda Information</button>
       </div>
     </div>
   )

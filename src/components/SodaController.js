@@ -2,6 +2,7 @@ import React from 'react';
 import SodaList from './SodaList';
 import AddSodaForm from './AddSodaForm';
 import SodaDetails from './SodaDetails';
+import EditSodaForm from './EditSodaForm';
 
 class SodaController extends React.Component {
   constructor() {
@@ -45,7 +46,8 @@ class SodaController extends React.Component {
       pageShowing: 1
       // 1 = SodaList view,
       // 2 = SodaDetail view,
-      // 3 = AddSodaForm view
+      // 3 = AddSodaForm view,
+      // 4 = EditSodaForm view
     };
   }
 
@@ -85,6 +87,26 @@ class SodaController extends React.Component {
     })
   }
 
+  handleEditSodaClick = () => {
+    this.setState({
+      pageShowing: 4
+    })
+  }
+
+  // -------Sent to EditSodaForm---------
+  handleEditSoda = (editedSoda) => {
+    const newSodaList = this.state.mainSodaList
+    .filter((soda) => soda.id !== editedSoda.id)
+    .concat(editedSoda)
+    this.setState({
+      mainSodaList: newSodaList,
+      currentSodaInDetails: editedSoda,
+      pageShowing: 2
+    })
+  }
+
+  // -------Used Here---------
+
   handleClick = () => {
     if (this.state.pageShowing === 1) {
       this.setState(() => ({
@@ -105,12 +127,15 @@ class SodaController extends React.Component {
 
     if(this.state.pageShowing === 1) {
       currentPage = <SodaList currentSodaList={mainSodaList} onChangingDetailView={this.handleChangingDetailView}/>
-      buttonText = "Add soda"
+      buttonText = "Add a new soda"
     } else if(this.state.pageShowing === 2){
-      currentPage = <SodaDetails soda={currentSodaInDetails} onAmountChange={this.handleSodaAmountChange}/>
+      currentPage = <SodaDetails soda={currentSodaInDetails} onAmountChange={this.handleSodaAmountChange} onEditClick={this.handleEditSodaClick}/>
+      buttonText = "Back to soda fountains"
+    } else if(this.state.pageShowing === 3) {
+      currentPage = <AddSodaForm onNewSodaAdded={this.handleAddingNewSoda}/>
       buttonText = "Back to soda fountains"
     } else {
-      currentPage = <AddSodaForm onNewSodaAdded={this.handleAddingNewSoda}/>
+      currentPage = <EditSodaForm soda={currentSodaInDetails} onSodaEdit={this.handleEditSoda}/>
       buttonText = "Back to soda fountains"
     }
 
