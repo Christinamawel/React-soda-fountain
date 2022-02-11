@@ -43,6 +43,14 @@ class SodaController extends React.Component {
     };
   }
 
+  handleAddingNewSoda = (newSoda) => {
+    const newMainSodaList = this.state.mainSodaList.concat(newSoda);
+    this.setState({
+      mainSodaList: newMainSodaList,
+      pageShowing: 1
+    })
+  }
+
   handleClick = () => {
     if (this.state.pageShowing === 1) {
       this.setState(() => ({
@@ -64,7 +72,7 @@ class SodaController extends React.Component {
       currentPage = <SodaList currentSodaList={mainSodaList} />
       buttonText = "Add soda"
     } else if (this.state.pageShowing === 3) {
-      currentPage = <AddSodaForm />
+      currentPage = <AddSodaForm onNewSodaAdded={this.handleAddingNewSoda}/>
       buttonText = "Back to soda fountains"
     }
 

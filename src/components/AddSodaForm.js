@@ -1,12 +1,18 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import ReusableSodaForm from "./ReusableSodaForm";
 
-function AddSodaForm() {
+function AddSodaForm(props) {
 
   function handleAddSodaFormSubmission(event) {
     event.preventDefault();
-    console.log("");
+    props.onNewSodaAdded({
+      name: event.target.name.value, 
+      brand: event.target.brand.value, 
+      flavor: event.target.flavor.value,
+      amount: event.target.amount.value,
+      color: event.target.color.value,
+    })
   };
 
   return (
@@ -19,8 +25,8 @@ function AddSodaForm() {
   )
 }
 
-// AddSodaForm.propTypes = {
-
-// }
+AddSodaForm.propTypes = {
+  onNewSodaAdded: PropTypes.func
+}
 
 export default AddSodaForm;
