@@ -1,6 +1,7 @@
 import React from 'react';
 import SodaList from './SodaList';
 import AddSodaForm from './AddSodaForm';
+import SodaDetails from './SodaDetails';
 
 class SodaController extends React.Component {
   constructor() {
@@ -12,30 +13,35 @@ class SodaController extends React.Component {
         brand: "Coca-Cola",
         flavor: "Cola",
         amount: "15",
-        color: "#333029"
+        color: "#333029",
+        id: 1
       },
       {
         name: "Sprit",
         brand: "Coca-Cola",
         flavor: "Lemon-Lime",
         amount: "8",
-        color: "#a3f5a3"
+        color: "#a3f5a3",
+        id: 2
       },
       {
         name: "A&W",
         brand: "A&W",
         flavor: "Root Beer",
         amount: "20",
-        color: "#4f4331"
+        color: "#4f4331",
+        id: 3
       },
       {
         name: "Fanta Orange",
         brand: "Fanta",
         flavor: "Orange",
         amount: "13",
-        color: "#e69a29"
+        color: "#e69a29",
+        id: 4
       }
     ],
+      currentSodaInDetails: null,
       pageShowing: 1
       // 1 = SodaList view,
       // 2 = SodaDetail view,
@@ -48,6 +54,16 @@ class SodaController extends React.Component {
     this.setState({
       mainSodaList: newMainSodaList,
       pageShowing: 1
+    })
+  }
+
+  handleChangingDetailView = (id) => {
+    const currentSoda = this.state.mainSodaList.filter(
+      (soda) => soda.id === id
+    )[0];
+    this.setState({
+      currentSodaInDetails: currentSoda,
+      pageShowing: 2
     })
   }
 
@@ -65,13 +81,17 @@ class SodaController extends React.Component {
 
   render () {
     const mainSodaList = this.state.mainSodaList;
+    const currentSodaInDetails = this.state.currentSodaInDetails;
     let currentPage = null;
     let buttonText = null;
 
     if(this.state.pageShowing === 1) {
-      currentPage = <SodaList currentSodaList={mainSodaList} />
+      currentPage = <SodaList currentSodaList={mainSodaList} onChangingDetailView={this.handleChangingDetailView}/>
       buttonText = "Add soda"
-    } else if (this.state.pageShowing === 3) {
+    } else if(this.state.pageShowing === 2){
+      currentPage = <SodaDetails soda={currentSodaInDetails} />
+      buttonText = "Back to soda fountains"
+    } else {
       currentPage = <AddSodaForm onNewSodaAdded={this.handleAddingNewSoda}/>
       buttonText = "Back to soda fountains"
     }

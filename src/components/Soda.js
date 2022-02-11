@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Soda(props) {
   const sodaBarStyles = {
@@ -7,14 +8,28 @@ function Soda(props) {
     backgroundColor: `${props.color}`
   }
 
+  function handleClick() {
+    props.onChangingDetailView(props.id)
+  }
+
   return (
-    <div>
+    <div onClick={handleClick}>
       <div id="soda-bar" style={sodaBarStyles}></div>
       <h3>{props.name}</h3>
       <p>{props.brand}</p>
       <p>{props.flavor}</p>
     </div>
   )
+}
+
+Soda.propTypes = {
+  onChangingDetailView: PropTypes.func,
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  flavor: PropTypes.string,
+  amount: PropTypes.number,
+  color: PropTypes.string,
+  id: PropTypes.number
 }
 
 export default Soda;

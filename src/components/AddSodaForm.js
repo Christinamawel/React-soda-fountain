@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import ReusableSodaForm from "./ReusableSodaForm";
+import { v4 } from "uuid";
 
 function AddSodaForm(props) {
 
@@ -12,6 +13,7 @@ function AddSodaForm(props) {
       flavor: event.target.flavor.value,
       amount: event.target.amount.value,
       color: event.target.color.value,
+      id: v4()
     })
   };
 
