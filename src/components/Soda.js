@@ -5,7 +5,8 @@ function Soda(props) {
   const sodaBarStyles = {
     width: "3em",
     height: `${1 * props.amount}em`,
-    backgroundColor: `${props.color}`
+    backgroundColor: `${props.color}`,
+    margin: "0 auto"
   }
 
   function handleClick() {
