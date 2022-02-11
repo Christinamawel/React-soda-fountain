@@ -1,9 +1,6 @@
 # _Suzy's Soda Shop_        
 
 #### By **Christina Welch** 
-<br>
-
-![Animal Shelter Illustration](AnimalShelter/Assets/img/animal-illustration.jpg)
 
 #### _A webpage made with react to track soda in soda fountains_
 
@@ -37,7 +34,7 @@ _End of week friday project for epicodus school made to demonstrate skills in Re
 
 ## Components Diagram
 
-![diagram of the components](./src/img/component diagram.png)
+![Diagram of Components](src/img/component-diagram.png)
 
 <br>
 
