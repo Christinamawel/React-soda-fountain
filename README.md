@@ -6,7 +6,7 @@
 
 <br>
 
-![Diagram of Components](src\img\diner-photo-Spencer-Davis.jpg)
+![Diner Photo](src/img/diner-photo-Spencer-Davis.jpg)
 ##### Photo By **Spencer Davis on Unsplash.com**
 
 <br>
