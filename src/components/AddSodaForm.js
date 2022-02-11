@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ReusableSodaForm from "./ReusableSodaForm";
-import ReusableForm from "./ReusableSodaForm";
 
 function AddSodaForm() {
 
@@ -12,12 +11,16 @@ function AddSodaForm() {
 
   return (
     <React.Fragment>
-      <ReusableForm
+      <ReusableSodaForm
         formSubmissionHandler={handleAddSodaFormSubmission}
         buttonText="Fill Soda Fountain"
       />
     </React.Fragment>
   )
 }
+
+// AddSodaForm.propTypes = {
+
+// }
 
 export default AddSodaForm;

@@ -10,7 +10,7 @@ function SodaList(props) {
 
   return (
     <div id="soda-list" style={sodaListStyles}>
-      {props.sodaList.map((soda) => (
+      {props.currentSodaList.map((soda) => (
         <Soda
           name={soda.name}
           brand={soda.brand}
