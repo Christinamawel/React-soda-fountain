@@ -9,40 +9,7 @@ class SodaController extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainSodaList: [
-        {
-          name: "cola",
-          brand: "",
-          flavor: "",
-          amount: 5,
-          color: "black",
-          id: 1
-        },
-        {
-          name: "cola",
-          brand: "",
-          flavor: "",
-          amount: 10,
-          color: "orange",
-          id: 2
-        },
-        {
-          name: "cola",
-          brand: "",
-          flavor: "",
-          amount: 20,
-          color: "pink",
-          id: 3
-        },
-        {
-          name: "cola",
-          brand: "",
-          flavor: "",
-          amount: 13,
-          color: "green",
-          id: 4
-        },
-      ],
+      mainSodaList: [],
       currentSodaInDetails: null,
       pageShowing: 1
       // 1 = SodaList view,
