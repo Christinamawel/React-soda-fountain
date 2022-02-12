@@ -10,6 +10,7 @@
 ##### Photo By **Spencer Davis on Unsplash.com**
 
 <br>
+
 ## 💾 Technologies Used
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -42,7 +43,7 @@ _End of week friday project for epicodus school made to demonstrate skills in Re
 
 ## ❌ Known Bugs
 
-no known bugs
+if you add more than 9 sodas the styles on the list page wont work
 
 ## 📃 License
 

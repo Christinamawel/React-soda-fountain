@@ -1,6 +1,7 @@
 import React from 'react';
 import Soda from './Soda';
 import PropTypes from 'prop-types';
+import sodaFountainImage from '../img/soda-fountain.png';
 
 function SodaList(props) {
 
@@ -8,12 +9,34 @@ function SodaList(props) {
     display: "flex",
     columnGap: "2em",
     alignItems: "flex-end",
-    minHeight: "30em",
+    minHeight: "33em",
     justifyContent: "center",
     marginBottom: "1em"
   }
 
+  const sodaFountainDivStyles = {
+    position: "absolute",
+    display: "flex",
+    columnGap: "2em",
+    alignItems: "flex-end",
+    minHeight: "30em",
+    justifyContent: "center",
+    marginBottom: "1em",
+    width: "100%",
+  }
+
+  const sodaFountainsStyle = {
+    height: "32em",
+    width: "12em"
+  }
+
   return (
+    <React.Fragment>
+      <div style={sodaFountainDivStyles}>
+        {props.currentSodaList.map((soda) => (
+          <img style={sodaFountainsStyle} src={sodaFountainImage} />
+        ))}
+      </div>
       <div id="soda-list" style={sodaListStyles}>
           {props.currentSodaList.map((soda) => (
             <Soda
@@ -27,7 +50,8 @@ function SodaList(props) {
               key={soda.id}
             />
           ))}
-    </div>
+        </div>
+    </React.Fragment>
   )
 }
 

@@ -5,7 +5,8 @@ function Header() {
     fontSize: "4rem",
     display: "flowRoot",
     marginTop: "0",
-    paddingTop: ".5em"
+    paddingTop: ".5em",
+    marginBottom: ".3em"
   }
 
   return (

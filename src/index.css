@@ -10,6 +10,7 @@ body {
 
 h1 {
   font-family: 'Fontdiner Swanky', 'Poppins', Arial, Helvetica, sans-serif;
+  color: rgb(175, 103, 115);
 }
 
 h3 {
@@ -32,4 +33,9 @@ button {
 button:hover {
   cursor: pointer;
   background-color: rgb(199, 133, 144);
+}
+
+#sodaComponentDiv:hover {
+  cursor: pointer;
+  color:rgb(175, 103, 115);
 }
