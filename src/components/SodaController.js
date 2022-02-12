@@ -9,7 +9,40 @@ class SodaController extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainSodaList: [],
+      mainSodaList: [
+        {
+          name: "cola",
+          brand: "",
+          flavor: "",
+          amount: 5,
+          color: "black",
+          id: 1
+        },
+        {
+          name: "cola",
+          brand: "",
+          flavor: "",
+          amount: 10,
+          color: "orange",
+          id: 2
+        },
+        {
+          name: "cola",
+          brand: "",
+          flavor: "",
+          amount: 20,
+          color: "pink",
+          id: 3
+        },
+        {
+          name: "cola",
+          brand: "",
+          flavor: "",
+          amount: 13,
+          color: "green",
+          id: 4
+        },
+      ],
       currentSodaInDetails: null,
       pageShowing: 1
       // 1 = SodaList view,
@@ -141,8 +174,8 @@ class SodaController extends React.Component {
 
     return(
       <React.Fragment>
+        <button style={{margin: ".5em"}} onClick={this.handleClick}>{buttonText}</button>
         {currentPage}
-        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }

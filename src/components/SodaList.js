@@ -9,7 +9,7 @@ function SodaList(props) {
     display: "flex",
     columnGap: "2em",
     alignItems: "flex-end",
-    minHeight: "33em",
+    minHeight: "43em",
     justifyContent: "center",
     marginBottom: "1em"
   }
@@ -37,7 +37,8 @@ function SodaList(props) {
           <img style={sodaFountainsStyle} src={sodaFountainImage} />
         ))}
       </div>
-      <div id="soda-list" style={sodaListStyles}>
+        {props.currentSodaList.length === 0 ? <h2>No sodas have been added</h2> :
+        <div id="soda-list" style={sodaListStyles}>
           {props.currentSodaList.map((soda) => (
             <Soda
               onChangingDetailView={props.onChangingDetailView}
@@ -50,7 +51,8 @@ function SodaList(props) {
               key={soda.id}
             />
           ))}
-        </div>
+          </div>
+        }
     </React.Fragment>
   )
 }

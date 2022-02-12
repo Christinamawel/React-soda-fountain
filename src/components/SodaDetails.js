@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import sodaFountainImage from '../img/soda-fountain.png';
 
 function SodaDetails(props) {
   const { soda } = props;
@@ -7,15 +8,27 @@ function SodaDetails(props) {
     width: "3em",
     height: `${1 * soda.amount}em`,
     backgroundColor: `${soda.color}`,
-    margin: "0 auto"
+    margin: "0 auto 12em auto",
+    width: "10em"
   }
 
   const detailsDivStyle = {
-    minHeight: "32em",
+    minHeight: "43em",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
     marginBottom: "1em"
+  }
+
+  const imgDiv = {
+    position: "absolute",
+    marginRight: "18.5em",
+    marginBottom: "8em"
+  }
+
+  const sodaFountainsStyle = {
+    height: "32em",
+    width: "12em"
   }
 
   const sodaDivStyles = {
@@ -50,6 +63,9 @@ function SodaDetails(props) {
 
   return (
     <div style={detailsDivStyle}>
+      <div style={imgDiv}>
+      <img style={sodaFountainsStyle} src={sodaFountainImage} />
+      </div>
       <div style={sodaDivStyles}>
         <div style={sodaBarStyles}></div>
         <h3>{soda.name}</h3>
