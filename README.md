@@ -4,6 +4,8 @@
 
 #### _A webpage made with react to track soda in soda fountains_
 
+## [See the Hosted Project](https://christinamawel.github.io/React-soda-fountain/)
+
 <br>
 
 ![Diner Photo](src/img/diner-photo-Spencer-Davis.jpg)
