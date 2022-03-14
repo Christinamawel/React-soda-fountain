@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-soda-fountain/static/css/main.f32f0a9a.chunk.css",
+    "main.js": "/React-soda-fountain/static/js/main.90a7967a.chunk.js",
+    "main.js.map": "/React-soda-fountain/static/js/main.90a7967a.chunk.js.map",
+    "runtime-main.js": "/React-soda-fountain/static/js/runtime-main.2d39e13a.js",
+    "runtime-main.js.map": "/React-soda-fountain/static/js/runtime-main.2d39e13a.js.map",
+    "static/js/2.8870e625.chunk.js": "/React-soda-fountain/static/js/2.8870e625.chunk.js",
+    "static/js/2.8870e625.chunk.js.map": "/React-soda-fountain/static/js/2.8870e625.chunk.js.map",
+    "static/js/3.87562ae1.chunk.js": "/React-soda-fountain/static/js/3.87562ae1.chunk.js",
+    "static/js/3.87562ae1.chunk.js.map": "/React-soda-fountain/static/js/3.87562ae1.chunk.js.map",
+    "index.html": "/React-soda-fountain/index.html",
+    "precache-manifest.6adafb78646dd20779ec2dff90fef4d8.js": "/React-soda-fountain/precache-manifest.6adafb78646dd20779ec2dff90fef4d8.js",
+    "service-worker.js": "/React-soda-fountain/service-worker.js",
+    "static/css/main.f32f0a9a.chunk.css.map": "/React-soda-fountain/static/css/main.f32f0a9a.chunk.css.map",
+    "static/media/index.css": "/React-soda-fountain/static/media/diner-photo-Spencer-Davis.1f5600cb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d39e13a.js",
+    "static/js/2.8870e625.chunk.js",
+    "static/css/main.f32f0a9a.chunk.css",
+    "static/js/main.90a7967a.chunk.js"
+  ]
+}
